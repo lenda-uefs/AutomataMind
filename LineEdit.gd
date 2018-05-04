@@ -22,6 +22,7 @@ func on_text_enter(text):
 	if(text == secret_seq):
 		self.editable = false
 		seq_label._change_label("ffbabf") # MUDAR testando trocar a sequencia depois que ele acerta, vai mudar
+		# get_node("/root/MainScene/Automato").texture = load("res://icon.png") MUDAR trocar autômato depois que acerta
 		self.editable = true
 	else: 
 		for i in secret_seq:
