@@ -19,10 +19,14 @@ func _ready():
 func _fixed_process(delta):
 #	# Called every frame. Delta is time since last frame.
 #	# Update game logic here.
-	frase = get_node("LineEdit").get_text()
-	get_node("Teste").set_text(frase)
+	
 	pass
 
+func _altera_texto(num):
+	frase = get_node("LineEdit").get_text()
+	var no = "Tentativas/T" + str(num)
+	get_node(no).set_text(frase)
+	
 #func _input(event):
 	#if event.is_action_pressed("ui_type"): 
 	#	texto.append("a")

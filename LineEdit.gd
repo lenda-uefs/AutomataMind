@@ -33,6 +33,8 @@ func on_text_enter(text):
 			if(c == sequencia[d]):
 				print("um igual")
 			d = d+1
+	
+	get_node("/root/MainScene")._altera_texto(0)
 	self.set_text("")
 	
 

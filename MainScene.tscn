@@ -18,7 +18,7 @@ use_filter = false
 font_data = SubResource( 1 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=3]
 
 size = 35
 use_mipmaps = true
@@ -240,7 +240,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "a b c d e f g"
 percent_visible = 1.0
