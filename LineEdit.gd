@@ -19,6 +19,8 @@ func on_text_enter(text):
 	print(text)
 	var d = 0 
 	
+	# testando trocar cor do texto: get_node("/root/MainScene/LabelTeste").add_color_override("font_color", Color(1,0,1,1))
+	
 	if(text == secret_seq):
 		self.editable = false
 		seq_label._change_label("ffbabf") # MUDAR testando trocar a sequencia depois que ele acerta, vai mudar
