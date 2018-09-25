@@ -1,8 +1,5 @@
 extends Node2D
 
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
 
 var texto = ["x"]
 var i = 0
@@ -17,15 +14,13 @@ func _ready():
 	pass
 
 func _fixed_process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
 	
 	pass
 
 func _altera_texto(num):
 	frase = get_node("LineEdit").get_text()
-	var no = "Tentativas/T" + str(num)
-	get_node(no).set_text(frase)
+	var node = "Tentativas/T" + str(num)
+	get_node(node).set_text(frase)
 	
 #func _input(event):
 	#if event.is_action_pressed("ui_type"): 
