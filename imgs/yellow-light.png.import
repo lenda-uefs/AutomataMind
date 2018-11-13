@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/menu-bg.png-98b0d1266b691e0ae4ac6dab3ffee3ac.stex"
+path="res://.import/yellow-light.png-dd7c5abdbd457ea1b9037c92b2cf21a6.stex"
 
 [deps]
 
-source_file="res://imgs/menu-bg.png"
-source_md5="b3c9723029de6a94b43b19263ea77a6b"
+source_file="res://imgs/yellow-light.png"
+source_md5="137c75f47fdf2968e98310c415097e44"
 
-dest_files=[ "res://.import/menu-bg.png-98b0d1266b691e0ae4ac6dab3ffee3ac.stex" ]
-dest_md5="10d07441cba2723e7d16a10c810bdc19"
+dest_files=[ "res://.import/yellow-light.png-dd7c5abdbd457ea1b9037c92b2cf21a6.stex" ]
+dest_md5="f3c425dff5e98674567d592abd81f589"
 
 [params]
 
