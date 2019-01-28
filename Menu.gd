@@ -22,9 +22,10 @@ func on_button_pressed():
 		get_node("yellowCircle2/AnimationPlayer").play("blink")
 		$Timer.start()
 		yield($Timer, "timeout")
-		get_node("/root/global")._goto_scene("MainScene.tscn")
+		get_node("/root/global")._goto_scene("lvl_selection.tscn")
 	else: 
 		get_node("redCircle/AnimationPlayer").play("blink")
+		
 
 func on_instruction_pressed(): 
 	get_node("yellowCircle/AnimationPlayer").play("blink")

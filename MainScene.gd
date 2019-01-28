@@ -25,6 +25,10 @@ func _on_btn_back():
 func _altera_texto(num):
 	frase = get_node("LineEdit").get_text()
 	var node = "ScrollContainer/VBoxContainer/Tentativas/T" + str(num)
+	var placeholder = "ScrollContainer/VBoxContainer/Tentativas/S" + str(num)
+	var pins = "ScrollContainer/VBoxContainer/Pinos/P" + str(num)
+	get_node(placeholder).set_visible(true)
+	get_node(pins).set_visible(true)
 	get_node(node).set_visible(true)
 	get_node(node).set_text(frase)
 	

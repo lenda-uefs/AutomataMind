@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://MainScene.gd" type="Script" id=1]
 [ext_resource path="res://imgs/pin_place.PNG" type="Texture" id=2]
@@ -7,26 +7,27 @@
 [ext_resource path="res://Sequence.gd" type="Script" id=5]
 [ext_resource path="res://LineEdit.gd" type="Script" id=6]
 [ext_resource path="res://imgs/automato copy.png" type="Texture" id=7]
-[ext_resource path="res://imgs/bg_game.PNG" type="Texture" id=8]
-[ext_resource path="res://fonts/chinese rocks rg.ttf" type="DynamicFontData" id=9]
-[ext_resource path="res://imgs/left-arrow.png" type="Texture" id=10]
+[ext_resource path="res://levels/Automato.gd" type="Script" id=8]
+[ext_resource path="res://imgs/bg_game.PNG" type="Texture" id=9]
+[ext_resource path="res://fonts/chinese rocks rg.ttf" type="DynamicFontData" id=10]
+[ext_resource path="res://imgs/left-arrow.png" type="Texture" id=11]
 
-[sub_resource type="DynamicFontData" id=2]
+[sub_resource type="DynamicFontData" id=1]
 
 font_path = "res://fonts/Apple ][.ttf"
 _sections_unfolded = [ "Resource" ]
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=2]
 
 size = 35
 use_mipmaps = true
 use_filter = false
 extra_spacing_char = 62
 extra_spacing_space = 33
-font_data = SubResource( 2 )
+font_data = SubResource( 1 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Resource", "Settings" ]
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=3]
 
 size = 35
 use_mipmaps = false
@@ -36,7 +37,7 @@ extra_spacing_space = 33
 font_data = ExtResource( 4 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=4]
 
 size = 14
 use_mipmaps = false
@@ -49,7 +50,7 @@ _sections_unfolded = [ "Font", "Font/fallback", "Resource", "Settings" ]
 size = 40
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 9 )
+font_data = ExtResource( 10 )
 _sections_unfolded = [ "Font", "Resource", "Settings" ]
 
 [sub_resource type="DynamicFontData" id=6]
@@ -64,14 +65,13 @@ use_filter = false
 font_data = SubResource( 6 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="MainScene" type="Node2D" index="0"]
+[node name="MainScene" type="Node2D"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Z Index" ]
 
 [node name="ScrollContainer" type="ScrollContainer" parent="." index="0"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -121,26 +121,31 @@ texture = ExtResource( 2 )
 
 [node name="P1" type="Sprite" parent="ScrollContainer/VBoxContainer/Pinos" index="1"]
 
+visible = false
 position = Vector2( 1860.19, 379.791 )
 texture = ExtResource( 2 )
 
 [node name="P2" type="Sprite" parent="ScrollContainer/VBoxContainer/Pinos" index="2"]
 
+visible = false
 position = Vector2( 1860.19, 454.949 )
 texture = ExtResource( 2 )
 
 [node name="P3" type="Sprite" parent="ScrollContainer/VBoxContainer/Pinos" index="3"]
 
+visible = false
 position = Vector2( 1860.19, 531.778 )
 texture = ExtResource( 2 )
 
 [node name="P4" type="Sprite" parent="ScrollContainer/VBoxContainer/Pinos" index="4"]
 
+visible = false
 position = Vector2( 1860.19, 618.627 )
 texture = ExtResource( 2 )
 
 [node name="P5" type="Sprite" parent="ScrollContainer/VBoxContainer/Pinos" index="5"]
 
+visible = false
 position = Vector2( 1860.19, 700.466 )
 texture = ExtResource( 2 )
 
@@ -148,35 +153,40 @@ texture = ExtResource( 2 )
 
 position = Vector2( -2.94208, -231.97 )
 
-[node name="Sprite" type="Sprite" parent="ScrollContainer/VBoxContainer/Tentativas" index="0"]
+[node name="S0" type="Sprite" parent="ScrollContainer/VBoxContainer/Tentativas" index="0"]
 
 position = Vector2( 647.913, 266.803 )
 texture = ExtResource( 3 )
 _sections_unfolded = [ "Animation", "Material", "Region", "Transform", "Visibility", "Z Index" ]
 
-[node name="Sprite2" type="Sprite" parent="ScrollContainer/VBoxContainer/Tentativas" index="1"]
+[node name="S1" type="Sprite" parent="ScrollContainer/VBoxContainer/Tentativas" index="1"]
 
-position = Vector2( 647.913, 498.737 )
-texture = ExtResource( 3 )
-
-[node name="Sprite3" type="Sprite" parent="ScrollContainer/VBoxContainer/Tentativas" index="2"]
-
-position = Vector2( 647.913, 419.653 )
-texture = ExtResource( 3 )
-
-[node name="Sprite4" type="Sprite" parent="ScrollContainer/VBoxContainer/Tentativas" index="3"]
-
+visible = false
 position = Vector2( 647.913, 342.556 )
 texture = ExtResource( 3 )
 
-[node name="Sprite5" type="Sprite" parent="ScrollContainer/VBoxContainer/Tentativas" index="4"]
+[node name="S2" type="Sprite" parent="ScrollContainer/VBoxContainer/Tentativas" index="2"]
 
+visible = false
+position = Vector2( 647.913, 419.653 )
+texture = ExtResource( 3 )
+
+[node name="S3" type="Sprite" parent="ScrollContainer/VBoxContainer/Tentativas" index="3"]
+
+visible = false
+position = Vector2( 647.913, 498.737 )
+texture = ExtResource( 3 )
+
+[node name="S4" type="Sprite" parent="ScrollContainer/VBoxContainer/Tentativas" index="4"]
+
+visible = false
 position = Vector2( 650.634, 581.982 )
 texture = ExtResource( 3 )
 
-[node name="Sprite6" type="Sprite" parent="ScrollContainer/VBoxContainer/Tentativas" index="5"]
+[node name="S5" type="Sprite" parent="ScrollContainer/VBoxContainer/Tentativas" index="5"]
 
-position = Vector2( 650.634, 664.886 )
+visible = false
+position = Vector2( 652.304, 664.886 )
 texture = ExtResource( 3 )
 
 [node name="T0" type="Label" parent="ScrollContainer/VBoxContainer/Tentativas" index="6"]
@@ -196,7 +206,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "aaaaaa"
 clip_text = true
@@ -222,7 +232,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 3 )
 text = "aaaa"
 percent_visible = 1.0
 lines_skipped = 0
@@ -246,7 +256,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 3 )
 text = "aaaa"
 percent_visible = 1.0
 lines_skipped = 0
@@ -270,7 +280,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 3 )
 text = "aaaa"
 percent_visible = 1.0
 lines_skipped = 0
@@ -294,7 +304,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 3 )
 text = "aaaa"
 percent_visible = 1.0
 lines_skipped = 0
@@ -318,7 +328,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 3 )
 text = "aaaa"
 percent_visible = 1.0
 lines_skipped = 0
@@ -373,9 +383,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 500.0
-margin_top = 573.0
+margin_top = 571.0
 margin_right = 758.0
-margin_bottom = 602.0
+margin_bottom = 600.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -383,7 +393,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 1
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 4 )
 focus_mode = 2
 context_menu_enabled = true
 placeholder_alpha = 0.6
@@ -399,6 +409,7 @@ position = Vector2( 615.74, 81.8487 )
 rotation = -0.000399902
 scale = Vector2( 0.916482, 0.911423 )
 texture = ExtResource( 7 )
+script = ExtResource( 8 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." index="4"]
 
@@ -442,7 +453,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 expand = true
 stretch_mode = 0
 
@@ -452,10 +463,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 44.0
-margin_top = 101.0
-margin_right = 170.0
-margin_bottom = 149.0
+margin_left = 134.0
+margin_top = 116.0
+margin_right = 288.0
+margin_bottom = 164.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -492,7 +503,7 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-icon = ExtResource( 10 )
+icon = ExtResource( 11 )
 flat = true
 align = 1
 _sections_unfolded = [ "Rect" ]

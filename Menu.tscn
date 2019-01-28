@@ -1,12 +1,18 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Menu.gd" type="Script" id=1]
 [ext_resource path="res://imgs/menu-bg.png" type="Texture" id=2]
 [ext_resource path="res://imgs/btn-instr.png" type="Texture" id=3]
-[ext_resource path="res://imgs/btn-jogar.png" type="Texture" id=4]
-[ext_resource path="res://imgs/btn-sair.png" type="Texture" id=5]
-[ext_resource path="res://imgs/yellow-light.png" type="Texture" id=6]
-[ext_resource path="res://imgs/red-light.png" type="Texture" id=7]
+[ext_resource path="res://imgs/btn-instr_press.png" type="Texture" id=4]
+[ext_resource path="res://imgs/btn-instr_hover.png" type="Texture" id=5]
+[ext_resource path="res://imgs/btn-jogar.png" type="Texture" id=6]
+[ext_resource path="res://imgs/btn-jogar_press.png" type="Texture" id=7]
+[ext_resource path="res://imgs/btn-jogar_hover.png" type="Texture" id=8]
+[ext_resource path="res://imgs/btn-sair.png" type="Texture" id=9]
+[ext_resource path="res://imgs/btn-sair_press.png" type="Texture" id=10]
+[ext_resource path="res://imgs/btn-sair_hover.png" type="Texture" id=11]
+[ext_resource path="res://imgs/yellow-light.png" type="Texture" id=12]
+[ext_resource path="res://imgs/red-light.png" type="Texture" id=13]
 
 [sub_resource type="Animation" id=1]
 
@@ -138,7 +144,7 @@ stretch_mode = 0
 
 [node name="Buttons" type="Node2D" parent="." index="1"]
 
-[node name="btnInstrucoes" type="Button" parent="Buttons" index="0"]
+[node name="btnInstrucoes" type="TextureButton" parent="Buttons" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -159,20 +165,20 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-icon = ExtResource( 3 )
-flat = true
-align = 1
-_sections_unfolded = [ "Focus", "Material", "Visibility" ]
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+_sections_unfolded = [ "Focus", "Material", "Textures", "Visibility", "custom_styles" ]
 
-[node name="btnJogar" type="Button" parent="Buttons" index="1"]
+[node name="btnJogar" type="TextureButton" parent="Buttons" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 510.0
+margin_left = 519.0
 margin_top = 487.0
-margin_right = 694.0
+margin_right = 703.0
 margin_bottom = 575.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -185,11 +191,12 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-icon = ExtResource( 4 )
-flat = true
-align = 1
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 7 )
+texture_hover = ExtResource( 8 )
+_sections_unfolded = [ "Textures" ]
 
-[node name="btnSair" type="Button" parent="Buttons" index="2"]
+[node name="btnSair" type="TextureButton" parent="Buttons" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -210,16 +217,17 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-icon = ExtResource( 5 )
-flat = true
-align = 1
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 10 )
+texture_hover = ExtResource( 11 )
+_sections_unfolded = [ "Textures" ]
 
 [node name="yellowCircle" type="Sprite" parent="." index="2"]
 
 editor/display_folded = true
 visible = false
 position = Vector2( 359.111, 324.762 )
-texture = ExtResource( 6 )
+texture = ExtResource( 12 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="yellowCircle" index="0"]
@@ -236,7 +244,7 @@ blend_times = [  ]
 
 visible = false
 position = Vector2( 606.459, 325.079 )
-texture = ExtResource( 6 )
+texture = ExtResource( 12 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="yellowCircle2" index="0"]
@@ -254,7 +262,7 @@ blend_times = [  ]
 editor/display_folded = true
 visible = false
 position = Vector2( 605.968, 321.193 )
-texture = ExtResource( 7 )
+texture = ExtResource( 13 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="redCircle" index="0"]

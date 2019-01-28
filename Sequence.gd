@@ -3,7 +3,7 @@ extends Label
 
 var sequencias = [["bbbaba", "aaabbb", "babbba", "aaaaab"], ["bcabcc", "cbbabb", "ababac", "cbbcab"]] #, ["testes", "testes", "testes"], ["xxxxxx", "xxxxxx"]]
 var rand
-var lvl_index = 0
+onready var lvl_index = get_node("/root/global").cur_lvl
 
 export var seq_atual = ""
 
@@ -29,9 +29,6 @@ func _get_cur_sequence():
 	print(seq_atual)
 	
 
-func _get_next_seq():
-	lvl_index = lvl_index + 1
-	_get_cur_sequence()
 
 #func _process(delta):
 #	# Called every frame. Delta is time since last frame.
