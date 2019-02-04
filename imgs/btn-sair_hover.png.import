@@ -7,10 +7,10 @@ path="res://.import/btn-sair_hover.png-ea05166444106e79eb172c2b14315904.stex"
 [deps]
 
 source_file="res://imgs/btn-sair_hover.png"
-source_md5="b03b6caf06760f7560a284891df14e6c"
+source_md5="e8a9bc1313fd26f907e64a35bb7e027a"
 
 dest_files=[ "res://.import/btn-sair_hover.png-ea05166444106e79eb172c2b14315904.stex" ]
-dest_md5="e518f62c8a236c6a72645589b2175f9b"
+dest_md5="2361c6e241f0d67bc7ca87b49598f99c"
 
 [params]
 

@@ -1,7 +1,7 @@
 extends Label
 
 
-var sequencias = [["bbbaba", "aaabbb", "babbba", "aaaaab"], ["bcabcc", "cbbabb", "ababac", "cbbcab"]] #, ["testes", "testes", "testes"], ["xxxxxx", "xxxxxx"]]
+var sequencias = [["aaab", "bcaa", "cbab", "babb"], ["bbbaba", "aaabbb", "babbba", "aaaaab"], ["bcabcc", "cbbabb", "ababac", "cbbcab"]] 
 var rand
 onready var lvl_index = get_node("/root/global").cur_lvl
 
@@ -26,11 +26,7 @@ func _get_cur_sequence():
 	
 	self.set_text(seq_atual)
 	
-	print(seq_atual)
+	print(seq_atual) # TODO: apagar isso
 	
 
 
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass

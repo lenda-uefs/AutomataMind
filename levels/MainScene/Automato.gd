@@ -1,8 +1,5 @@
 extends Sprite
 
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
 
 func _ready():
 	# Called every time the node is added to the scene.
@@ -16,7 +13,7 @@ func automato_0(senha):
 	for x in senha:
 		match cur_state: 
 			1: 
-				if(x == 'b'):
+				if(x == 'b' or x == 'c'):
 					cur_state = 1;
 				elif(x == 'a'):
 					cur_state = 2;
@@ -25,15 +22,11 @@ func automato_0(senha):
 			2:
 				if(x == 'a' or x == 'b'):
 					cur_state = 2;
+				else: 
+					return false;
 	
 	if(cur_state == 2):
 		return true;
 	else: 
 		return false;
 	
-	
-
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass

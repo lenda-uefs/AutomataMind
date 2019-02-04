@@ -1,37 +1,19 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://lvl_selection.gd" type="Script" id=1]
-[ext_resource path="res://imgs/bg_game.PNG" type="Texture" id=2]
+[ext_resource path="res://main-screens/lvl_selection.gd" type="Script" id=1]
+[ext_resource path="res://imgs/bg.png" type="Texture" id=2]
 [ext_resource path="res://imgs/0_lvl.png" type="Texture" id=3]
 [ext_resource path="res://imgs/0_lvl_hover.png" type="Texture" id=4]
 [ext_resource path="res://imgs/locked_lvl.png" type="Texture" id=5]
 [ext_resource path="res://imgs/locked_lvl_hover.png" type="Texture" id=6]
+[ext_resource path="res://imgs/locked_lvl_popup.png" type="Texture" id=7]
+[ext_resource path="res://imgs/left-arrow.png" type="Texture" id=8]
 
-[node name="lvl_selection" type="Node2D" index="0"]
+[node name="lvl_selection" type="Node2D"]
 
 script = ExtResource( 1 )
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="." index="0"]
-
-layer = -1
-offset = Vector2( 0, 0 )
-rotation = 0.0
-scale = Vector2( 1, 1 )
-transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-scroll_offset = Vector2( 0, 0 )
-scroll_base_offset = Vector2( 0, 0 )
-scroll_base_scale = Vector2( 1, 1 )
-scroll_limit_begin = Vector2( 0, 0 )
-scroll_limit_end = Vector2( 0, 0 )
-scroll_ignore_camera_zoom = true
-
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" index="0"]
-
-motion_scale = Vector2( 1, 1 )
-motion_offset = Vector2( 0, 0 )
-motion_mirroring = Vector2( 0, 0 )
-
-[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer" index="0"]
+[node name="TextureRect" type="TextureRect" parent="." index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -80,35 +62,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 131.0
-margin_top = 375.0
-margin_right = 647.0
-margin_bottom = 734.0
-rect_scale = Vector2( 0.4, 0.4 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-texture_normal = ExtResource( 5 )
-texture_hover = ExtResource( 6 )
-_sections_unfolded = [ "Rect", "Textures" ]
-
-[node name="lvl_2" type="TextureButton" parent="." index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 408.0
+margin_left = 401.0
 margin_top = 129.0
-margin_right = 924.0
+margin_right = 917.0
 margin_bottom = 488.0
 rect_scale = Vector2( 0.4, 0.4 )
 rect_pivot_offset = Vector2( 0, 0 )
@@ -126,33 +82,7 @@ texture_normal = ExtResource( 5 )
 texture_hover = ExtResource( 6 )
 _sections_unfolded = [ "Rect", "Textures" ]
 
-[node name="lvl_3" type="TextureButton" parent="." index="4"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 398.0
-margin_top = 377.0
-margin_right = 914.0
-margin_bottom = 736.0
-rect_scale = Vector2( 0.4, 0.4 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-texture_normal = ExtResource( 5 )
-texture_hover = ExtResource( 6 )
-_sections_unfolded = [ "Rect", "Textures" ]
-
-[node name="lvl_4" type="TextureButton" parent="." index="5"]
+[node name="lvl_2" type="TextureButton" parent="." index="3"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -178,16 +108,68 @@ texture_normal = ExtResource( 5 )
 texture_hover = ExtResource( 6 )
 _sections_unfolded = [ "Rect", "Textures" ]
 
+[node name="lvl_3" type="TextureButton" parent="." index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 918.0
+margin_top = 130.0
+margin_right = 1434.0
+margin_bottom = 489.0
+rect_scale = Vector2( 0.4, 0.4 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 5 )
+texture_hover = ExtResource( 6 )
+_sections_unfolded = [ "Rect", "Textures" ]
+
+[node name="lvl_4" type="TextureButton" parent="." index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 131.0
+margin_top = 375.0
+margin_right = 647.0
+margin_bottom = 734.0
+rect_scale = Vector2( 0.4, 0.4 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 5 )
+texture_hover = ExtResource( 6 )
+_sections_unfolded = [ "Rect", "Textures" ]
+
 [node name="lvl_5" type="TextureButton" parent="." index="6"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 656.0
-margin_top = 376.0
-margin_right = 1172.0
-margin_bottom = 735.0
+margin_left = 398.0
+margin_top = 377.0
+margin_right = 914.0
+margin_bottom = 736.0
 rect_scale = Vector2( 0.4, 0.4 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -210,10 +192,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 918.0
-margin_top = 130.0
-margin_right = 1434.0
-margin_bottom = 489.0
+margin_left = 656.0
+margin_top = 376.0
+margin_right = 1172.0
+margin_bottom = 735.0
 rect_scale = Vector2( 0.4, 0.4 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -255,5 +237,64 @@ group = null
 texture_normal = ExtResource( 5 )
 texture_hover = ExtResource( 6 )
 _sections_unfolded = [ "Rect", "Textures" ]
+
+[node name="Popup" type="Popup" parent="." index="9"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 613.0
+margin_top = 57.0
+margin_right = 653.0
+margin_bottom = 97.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+popup_exclusive = false
+
+[node name="Sprite" type="Sprite" parent="Popup" index="0"]
+
+position = Vector2( 0, 260.388 )
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Timer" type="Timer" parent="." index="10"]
+
+process_mode = 1
+wait_time = 3.0
+one_shot = true
+autostart = false
+
+[node name="Button" type="Button" parent="." index="11"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 14.0
+margin_top = 16.0
+margin_right = 128.0
+margin_bottom = 124.0
+rect_scale = Vector2( 0.5, 0.5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+icon = ExtResource( 8 )
+flat = true
+align = 1
+_sections_unfolded = [ "Rect" ]
 
 

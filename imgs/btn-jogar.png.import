@@ -7,10 +7,10 @@ path="res://.import/btn-jogar.png-8f92595ef1d4cd6edeab4af6daf1b21c.stex"
 [deps]
 
 source_file="res://imgs/btn-jogar.png"
-source_md5="f99e544672231a1c69d08278a8b0c60c"
+source_md5="f7e91b072b4c30afc455e10237b5a002"
 
 dest_files=[ "res://.import/btn-jogar.png-8f92595ef1d4cd6edeab4af6daf1b21c.stex" ]
-dest_md5="df45a136be8a4f1f505b4ac487ef4635"
+dest_md5="41ba79522963b834b53f81638b764630"
 
 [params]
 

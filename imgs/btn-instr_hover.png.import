@@ -7,10 +7,10 @@ path="res://.import/btn-instr_hover.png-f5c834548fb92b21ce20109d58becd2e.stex"
 [deps]
 
 source_file="res://imgs/btn-instr_hover.png"
-source_md5="3f01351c9d024ca8ac4247b86bfdf2b8"
+source_md5="e214fc10710171be336ccebb631403e4"
 
 dest_files=[ "res://.import/btn-instr_hover.png-f5c834548fb92b21ce20109d58becd2e.stex" ]
-dest_md5="ce5938d4142b499c02451792c35fddda"
+dest_md5="e476d0d7b757885a58c7a120ea466ba4"
 
 [params]
 

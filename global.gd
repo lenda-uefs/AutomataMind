@@ -8,6 +8,7 @@ var is_instruction_read
 var is_game_played
 
 export var cur_lvl = 0
+export var lvls_unlocked = 0
 
 func _ready():
 	var root = get_tree().get_root()
@@ -50,6 +51,6 @@ func _deferred_goto_scene(path):
 		reset_menu()
 	elif(scene_name == "Instructions"):
 		is_instruction_read = true
-	elif(scene_name == "MainScene"):
+	elif(scene_name == "lvl_selection"):
 		is_game_played = true
 	

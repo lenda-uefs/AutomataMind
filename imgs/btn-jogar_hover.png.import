@@ -7,10 +7,10 @@ path="res://.import/btn-jogar_hover.png-f02761e709555b0824f85313c483d14d.stex"
 [deps]
 
 source_file="res://imgs/btn-jogar_hover.png"
-source_md5="4975b158a695dbd98c8acddfd8a67bfb"
+source_md5="c5dcd675729e7e8e9bd7c92d08dfec41"
 
 dest_files=[ "res://.import/btn-jogar_hover.png-f02761e709555b0824f85313c483d14d.stex" ]
-dest_md5="50e0c62c0825ff0d5fb0a0a91f3ceb20"
+dest_md5="4311e90674c9a8ef903f8fcd33a443f0"
 
 [params]
 
