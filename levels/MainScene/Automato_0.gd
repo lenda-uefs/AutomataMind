@@ -2,12 +2,11 @@ extends Sprite
 
 
 func _ready():
-	# Called every time the node is added to the scene.
-	# Initialization here
+	
 	pass
 
-func automato_0(senha):
-	
+func check(senha):
+	print("oi")
 	var cur_state = 1;
 	
 	for x in senha:
@@ -25,8 +24,7 @@ func automato_0(senha):
 				else: 
 					return false;
 	
-	if(cur_state == 2):
-		return true;
-	else: 
-		return false;
+	return (cur_state == 2)
 	
+
+

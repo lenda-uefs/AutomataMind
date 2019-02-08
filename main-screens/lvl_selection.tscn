@@ -9,7 +9,7 @@
 [ext_resource path="res://imgs/locked_lvl_popup.png" type="Texture" id=7]
 [ext_resource path="res://imgs/left-arrow.png" type="Texture" id=8]
 
-[node name="lvl_selection" type="Node2D"]
+[node name="lvl_selection" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 

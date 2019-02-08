@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/automato.png-909126a849ee697310a28c0fc9f4cc07.stex"
+path="res://.import/1_lvl_hover.png-b33008eaa2aafe814725d7c1ed7bc188.stex"
 
 [deps]
 
-source_file="res://imgs/automato.png"
-source_md5="8fe6aa53baced27cf3db0705558c05a6"
+source_file="res://imgs/1_lvl_hover.png"
+source_md5="98df7f29ec01ba08757239f408486434"
 
-dest_files=[ "res://.import/automato.png-909126a849ee697310a28c0fc9f4cc07.stex" ]
-dest_md5="5483d2ee24c539e634991a4823ab73d5"
+dest_files=[ "res://.import/1_lvl_hover.png-b33008eaa2aafe814725d7c1ed7bc188.stex" ]
+dest_md5="e7c1c68b88038c6439bbc12a843f7779"
 
 [params]
 

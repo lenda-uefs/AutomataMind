@@ -126,7 +126,7 @@ tracks/0/keys = {
 "values": [ true, false, true, false, true, false ]
 }
 
-[node name="Menu" type="Node"]
+[node name="Menu" type="Node" index="0"]
 
 script = ExtResource( 1 )
 is_instruction_read = false
@@ -298,6 +298,7 @@ blend_times = [  ]
 
 [node name="yellowCircle3" type="Sprite" parent="." index="5"]
 
+editor/display_folded = true
 visible = false
 position = Vector2( 863.488, 317.835 )
 texture = ExtResource( 13 )
@@ -337,7 +338,5 @@ process_mode = 1
 wait_time = 0.6
 one_shot = false
 autostart = false
-
-[node name="Sprite" type="Sprite" parent="." index="8"]
 
 

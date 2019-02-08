@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/red_pin.PNG-e36121017c726cdc009c2bad69b14ddc.stex"
+path="res://.import/guess_6.PNG-f0cc54c822acb27bf25ff01f818a6641.stex"
 
 [deps]
 
-source_file="res://imgs/red_pin.PNG"
-source_md5="b01a265b4a688d56a8d69cc10f362bee"
+source_file="res://imgs/guess_6.PNG"
+source_md5="075eecb7612c0db5edc294a24320d593"
 
-dest_files=[ "res://.import/red_pin.PNG-e36121017c726cdc009c2bad69b14ddc.stex" ]
-dest_md5="1086039e7f916dbf3f68c2e460534c9a"
+dest_files=[ "res://.import/guess_6.PNG-f0cc54c822acb27bf25ff01f818a6641.stex" ]
+dest_md5="b94b4cd70f83021a94d80095eae0994b"
 
 [params]
 

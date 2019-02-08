@@ -1,39 +1,36 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://levels/MainScene/MainScene.gd" type="Script" id=1]
 [ext_resource path="res://imgs/bg.png" type="Texture" id=2]
-[ext_resource path="res://imgs/pin_place.PNG" type="Texture" id=3]
-[ext_resource path="res://imgs/guess_place.PNG" type="Texture" id=4]
+[ext_resource path="res://imgs/guess_place.PNG" type="Texture" id=3]
+[ext_resource path="res://fonts/Aldrich/adlrich.tres" type="DynamicFont" id=4]
 [ext_resource path="res://imgs/correct.png" type="Texture" id=5]
 [ext_resource path="res://levels/MainScene/Sequence.gd" type="Script" id=6]
-[ext_resource path="res://fonts/Apple ][.ttf" type="DynamicFontData" id=7]
-[ext_resource path="res://levels/MainScene/LineEdit.gd" type="Script" id=8]
-[ext_resource path="res://imgs/automato copy.png" type="Texture" id=9]
-[ext_resource path="res://levels/MainScene/Automato.gd" type="Script" id=10]
+[ext_resource path="res://levels/MainScene/LineEdit.gd" type="Script" id=7]
+[ext_resource path="res://imgs/automato2.png" type="Texture" id=8]
+[ext_resource path="res://levels/MainScene/Automato_0.gd" type="Script" id=9]
+[ext_resource path="res://fonts/Aldrich/Aldrich-Regular.ttf" type="DynamicFontData" id=10]
 [ext_resource path="res://imgs/left-arrow.png" type="Texture" id=11]
 
 [sub_resource type="DynamicFontData" id=1]
 
 font_path = "res://fonts/Aldrich/Aldrich-Regular.ttf"
-_sections_unfolded = [ "Resource" ]
 
 [sub_resource type="DynamicFont" id=2]
 
-size = 45
-use_mipmaps = true
-use_filter = false
-extra_spacing_char = 69
-extra_spacing_space = 32
-font_data = SubResource( 1 )
-_sections_unfolded = [ "Extra Spacing", "Font", "Resource", "Settings" ]
-
-[sub_resource type="DynamicFont" id=8]
-
-size = 14
+size = 24
 use_mipmaps = false
 use_filter = true
-font_data = ExtResource( 7 )
+font_data = SubResource( 1 )
 _sections_unfolded = [ "Font", "Font/fallback", "Resource", "Settings" ]
+
+[sub_resource type="DynamicFont" id=3]
+
+size = 25
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 10 )
+_sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="DynamicFontData" id=4]
 
@@ -42,30 +39,17 @@ _sections_unfolded = [ "Resource" ]
 
 [sub_resource type="DynamicFont" id=5]
 
-size = 30
-use_mipmaps = false
-use_filter = false
-font_data = SubResource( 4 )
-_sections_unfolded = [ "Font", "Resource", "Settings" ]
-
-[sub_resource type="DynamicFontData" id=6]
-
-font_path = "res://fonts/Aldrich/Aldrich-Regular.ttf"
-_sections_unfolded = [ "Resource" ]
-
-[sub_resource type="DynamicFont" id=7]
-
 size = 22
 use_mipmaps = false
 use_filter = false
-font_data = SubResource( 6 )
+font_data = SubResource( 4 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [node name="MainScene" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Z Index" ]
-max_tentativas = 7
+max_tentativas = 10
 
 [node name="TextureRect" type="TextureRect" parent="." index="0"]
 
@@ -73,8 +57,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 40.0
-margin_bottom = 40.0
+margin_right = 1229.0
+margin_bottom = 672.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -114,8 +98,8 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 1200.0
-margin_bottom = 600.0
-rect_min_size = Vector2( 1200, 600 )
+margin_bottom = 850.0
+rect_min_size = Vector2( 1200, 850 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -127,98 +111,82 @@ _sections_unfolded = [ "Rect", "Visibility" ]
 
 [node name="Pinos" type="Node2D" parent="ScrollContainer/VBoxContainer" index="0"]
 
-editor/display_folded = true
 position = Vector2( -867.566, -270.03 )
-
-[node name="P0" type="Sprite" parent="ScrollContainer/VBoxContainer/Pinos" index="0"]
-
-position = Vector2( 1860.19, 306.303 )
-texture = ExtResource( 3 )
-
-[node name="P1" type="Sprite" parent="ScrollContainer/VBoxContainer/Pinos" index="1"]
-
-visible = false
-position = Vector2( 1860.19, 379.791 )
-texture = ExtResource( 3 )
-
-[node name="P2" type="Sprite" parent="ScrollContainer/VBoxContainer/Pinos" index="2"]
-
-visible = false
-position = Vector2( 1860.19, 454.949 )
-texture = ExtResource( 3 )
-
-[node name="P3" type="Sprite" parent="ScrollContainer/VBoxContainer/Pinos" index="3"]
-
-visible = false
-position = Vector2( 1860.19, 531.778 )
-texture = ExtResource( 3 )
-
-[node name="P4" type="Sprite" parent="ScrollContainer/VBoxContainer/Pinos" index="4"]
-
-visible = false
-position = Vector2( 1860.19, 618.627 )
-texture = ExtResource( 3 )
-
-[node name="P5" type="Sprite" parent="ScrollContainer/VBoxContainer/Pinos" index="5"]
-
-visible = false
-position = Vector2( 1860.19, 700.466 )
-texture = ExtResource( 3 )
-
-[node name="P6" type="Sprite" parent="ScrollContainer/VBoxContainer/Pinos" index="6"]
-
-visible = false
-position = Vector2( 1860.19, 787.53 )
-texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Tentativas" type="Node2D" parent="ScrollContainer/VBoxContainer" index="1"]
 
+editor/display_folded = true
 position = Vector2( -32.4078, -231.97 )
 
 [node name="S0" type="Sprite" parent="ScrollContainer/VBoxContainer/Tentativas" index="0"]
 
+visible = false
 position = Vector2( 647.913, 266.803 )
-texture = ExtResource( 4 )
+texture = ExtResource( 3 )
 _sections_unfolded = [ "Animation", "Material", "Region", "Transform", "Visibility", "Z Index" ]
 
 [node name="S1" type="Sprite" parent="ScrollContainer/VBoxContainer/Tentativas" index="1"]
 
 visible = false
 position = Vector2( 647.913, 342.556 )
-texture = ExtResource( 4 )
+texture = ExtResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="S2" type="Sprite" parent="ScrollContainer/VBoxContainer/Tentativas" index="2"]
 
 visible = false
 position = Vector2( 647.913, 419.653 )
-texture = ExtResource( 4 )
+texture = ExtResource( 3 )
 
 [node name="S3" type="Sprite" parent="ScrollContainer/VBoxContainer/Tentativas" index="3"]
 
 visible = false
 position = Vector2( 647.913, 498.737 )
-texture = ExtResource( 4 )
+texture = ExtResource( 3 )
 
 [node name="S4" type="Sprite" parent="ScrollContainer/VBoxContainer/Tentativas" index="4"]
 
 visible = false
 position = Vector2( 650.634, 581.982 )
-texture = ExtResource( 4 )
+texture = ExtResource( 3 )
 
 [node name="S5" type="Sprite" parent="ScrollContainer/VBoxContainer/Tentativas" index="5"]
 
 visible = false
 position = Vector2( 652.304, 664.886 )
-texture = ExtResource( 4 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="S6" type="Sprite" parent="ScrollContainer/VBoxContainer/Tentativas" index="6"]
 
 visible = false
 position = Vector2( 652.304, 750.59 )
-texture = ExtResource( 4 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
 
-[node name="T0" type="Label" parent="ScrollContainer/VBoxContainer/Tentativas" index="7"]
+[node name="S7" type="Sprite" parent="ScrollContainer/VBoxContainer/Tentativas" index="7"]
+
+visible = false
+position = Vector2( 652.304, 840 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="S8" type="Sprite" parent="ScrollContainer/VBoxContainer/Tentativas" index="8"]
+
+visible = false
+position = Vector2( 652.304, 930 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="S9" type="Sprite" parent="ScrollContainer/VBoxContainer/Tentativas" index="9"]
+
+visible = false
+position = Vector2( 652.304, 1020 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="T0" type="Label" parent="ScrollContainer/VBoxContainer/Tentativas" index="10"]
 
 visible = false
 anchor_left = 0.0
@@ -235,7 +203,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "aaaaaa"
 clip_text = true
@@ -244,7 +212,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Material", "Visibility", "custom_colors", "custom_fonts", "custom_styles" ]
 
-[node name="T1" type="Label" parent="ScrollContainer/VBoxContainer/Tentativas" index="8"]
+[node name="T1" type="Label" parent="ScrollContainer/VBoxContainer/Tentativas" index="11"]
 
 visible = false
 anchor_left = 0.0
@@ -261,7 +229,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "aaaaaa"
 clip_text = true
@@ -270,7 +238,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Material", "Visibility", "custom_colors", "custom_fonts", "custom_styles" ]
 
-[node name="T2" type="Label" parent="ScrollContainer/VBoxContainer/Tentativas" index="9"]
+[node name="T2" type="Label" parent="ScrollContainer/VBoxContainer/Tentativas" index="12"]
 
 visible = false
 anchor_left = 0.0
@@ -287,7 +255,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "aaaaaa"
 clip_text = true
@@ -296,7 +264,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Material", "Visibility", "custom_colors", "custom_fonts", "custom_styles" ]
 
-[node name="T3" type="Label" parent="ScrollContainer/VBoxContainer/Tentativas" index="10"]
+[node name="T3" type="Label" parent="ScrollContainer/VBoxContainer/Tentativas" index="13"]
 
 visible = false
 anchor_left = 0.0
@@ -313,7 +281,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "aaaaaa"
 clip_text = true
@@ -322,7 +290,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Material", "Visibility", "custom_colors", "custom_fonts", "custom_styles" ]
 
-[node name="T4" type="Label" parent="ScrollContainer/VBoxContainer/Tentativas" index="11"]
+[node name="T4" type="Label" parent="ScrollContainer/VBoxContainer/Tentativas" index="14"]
 
 visible = false
 anchor_left = 0.0
@@ -339,7 +307,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "aaaaaa"
 clip_text = true
@@ -348,7 +316,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Material", "Visibility", "custom_colors", "custom_fonts", "custom_styles" ]
 
-[node name="T5" type="Label" parent="ScrollContainer/VBoxContainer/Tentativas" index="12"]
+[node name="T5" type="Label" parent="ScrollContainer/VBoxContainer/Tentativas" index="15"]
 
 visible = false
 anchor_left = 0.0
@@ -365,7 +333,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "aaaaaa"
 clip_text = true
@@ -374,7 +342,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Material", "Visibility", "custom_colors", "custom_fonts", "custom_styles" ]
 
-[node name="T6" type="Label" parent="ScrollContainer/VBoxContainer/Tentativas" index="13"]
+[node name="T6" type="Label" parent="ScrollContainer/VBoxContainer/Tentativas" index="16"]
 
 visible = false
 anchor_left = 0.0
@@ -391,7 +359,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "aaaaaa"
 clip_text = true
@@ -400,10 +368,89 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Material", "Visibility", "custom_colors", "custom_fonts", "custom_styles" ]
 
+[node name="T7" type="Label" parent="ScrollContainer/VBoxContainer/Tentativas" index="17"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 388.0
+margin_top = 820.0
+margin_right = 921.0
+margin_bottom = 863.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "aaaaaa"
+clip_text = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Material", "Rect", "Visibility", "custom_colors", "custom_fonts", "custom_styles" ]
+
+[node name="T8" type="Label" parent="ScrollContainer/VBoxContainer/Tentativas" index="18"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 388.0
+margin_top = 910.0
+margin_right = 921.0
+margin_bottom = 953.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "aaaaaa"
+clip_text = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Material", "Rect", "Visibility", "custom_colors", "custom_fonts", "custom_styles" ]
+
+[node name="T9" type="Label" parent="ScrollContainer/VBoxContainer/Tentativas" index="19"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 388.0
+margin_top = 1000.0
+margin_right = 921.0
+margin_bottom = 1043.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "aaaaaa"
+clip_text = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Material", "Rect", "Visibility", "custom_colors", "custom_fonts", "custom_styles" ]
+
 [node name="Verificacao" type="Node2D" parent="ScrollContainer/VBoxContainer" index="2"]
 
 editor/display_folded = true
 position = Vector2( -29.4658, 0 )
+_sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="V0" type="Sprite" parent="ScrollContainer/VBoxContainer/Verificacao" index="0"]
 
@@ -461,6 +508,30 @@ scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 5 )
 _sections_unfolded = [ "Transform" ]
 
+[node name="V7" type="Sprite" parent="ScrollContainer/VBoxContainer/Verificacao" index="7"]
+
+visible = false
+position = Vector2( 1130.5, 600 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="V8" type="Sprite" parent="ScrollContainer/VBoxContainer/Verificacao" index="8"]
+
+visible = false
+position = Vector2( 1130.5, 690 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="V9" type="Sprite" parent="ScrollContainer/VBoxContainer/Verificacao" index="9"]
+
+visible = false
+position = Vector2( 1130.5, 780 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Transform" ]
+
 [node name="SecretSequence" type="CanvasLayer" parent="." index="2"]
 
 editor/display_folded = true
@@ -510,8 +581,8 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 490.0
 margin_top = 571.0
-margin_right = 748.0
-margin_bottom = 600.0
+margin_right = 743.0
+margin_bottom = 607.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -519,14 +590,14 @@ mouse_filter = 0
 mouse_default_cursor_shape = 1
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 2 )
 focus_mode = 2
 context_menu_enabled = true
 placeholder_alpha = 0.6
 caret_blink = false
 caret_blink_speed = 0.65
 caret_position = 0
-script = ExtResource( 8 )
+script = ExtResource( 7 )
 _sections_unfolded = [ "Material", "Size Flags", "Theme", "Visibility", "custom_colors", "custom_fonts" ]
 
 [node name="Automato" type="Sprite" parent="." index="4"]
@@ -534,8 +605,8 @@ _sections_unfolded = [ "Material", "Size Flags", "Theme", "Visibility", "custom_
 position = Vector2( 598.552, 81.8487 )
 rotation = -0.000399902
 scale = Vector2( 0.916482, 0.911423 )
-texture = ExtResource( 9 )
-script = ExtResource( 10 )
+texture = ExtResource( 8 )
+script = ExtResource( 9 )
 
 [node name="Pontos" type="Label" parent="." index="5"]
 
@@ -544,22 +615,22 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 132.0
-margin_top = 19.0
-margin_right = 346.0
-margin_bottom = 67.0
+margin_top = 20.0
+margin_right = 332.0
+margin_bottom = 68.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "PONTOS: 0 "
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+_sections_unfolded = [ "custom_fonts" ]
 
 [node name="Tentativas" type="Label" parent="." index="6"]
 
@@ -577,9 +648,9 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "TENTATIVAS RESTANTES: 7"
+text = "TENTATIVAS RESTANTES: 10"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1

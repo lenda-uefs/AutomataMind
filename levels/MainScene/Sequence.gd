@@ -1,7 +1,7 @@
 extends Label
 
 
-var sequencias = [["aaab", "bcaa", "cbab", "babb"], ["bbbaba", "aaabbb", "babbba", "aaaaab"], ["bcabcc", "cbbabb", "ababac", "cbbcab"]] 
+var sequencias = [["aaab", "bcaa", "cbab", "babb"], ["1223", "2323", "2231", "3231"]] 
 var rand
 onready var lvl_index = get_node("/root/global").cur_lvl
 

@@ -12,6 +12,7 @@ var sequencia = ""
 var i = 0 # índice para iterar tentativas
 
 signal update_points() # sinal para saber quando atualizar os pontos
+signal unlock_lvl()
 
 func _ready():
 	
@@ -22,6 +23,7 @@ func _ready():
 	pass
 
 func on_text_enter(text): 
+	var pegs = []
 	sequencia = secret_seq
 	print(text)
 	var d = 0 # índice pra iterar sequencia de caracteres
@@ -30,24 +32,22 @@ func on_text_enter(text):
 		i = 0
 		self.editable = false
 		
-		self.get_parent()._clear_tries() # TODO: talvz possa mudar isso, acho que não precisa
 		global.lvls_unlocked+=1
 		
-		self.editable = true
 		emit_signal("update_points")
+		emit_signal("unlock_lvl")
 	else: 
 		
 		var correct = get_node("/root/MainScene/ScrollContainer/VBoxContainer/Verificacao/V" + str(i)) 
-		if(get_node("/root/MainScene/Automato").automato_0(text)):
-			correct.texture = load("res://imgs/correct.png")
+		if(get_node("/root/MainScene/Automato").check(text)):
 			correct.set_visible(true)
 		
 		
 		for c in text:
 			if(c == secret_seq[d]):
-				print("vermelho")
 				text[d] = "-"
 				sequencia[d] = "*"
+				pegs.append("V")
 			d = d+1
 		
 		d = 0
@@ -55,12 +55,12 @@ func on_text_enter(text):
 		for c in text:
 			var result = sequencia.find(c, 0)
 			if(result != -1):
-				print("branco")
 				text[d] = "-"
 				sequencia[result] = "*"
+				pegs.append("B")
 			d = d+1
 		
-		get_node("/root/MainScene")._altera_texto(i)
+		get_node("/root/MainScene")._altera_texto(i, pegs)
 		i = i+1
 		self.set_text("")
 	
