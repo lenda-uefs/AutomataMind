@@ -32,15 +32,18 @@ func on_text_enter(text):
 		i = 0
 		self.editable = false
 		
-		global.lvls_unlocked+=1
+		if(global.lvls_unlocked == global.cur_lvl):
+			global.lvls_unlocked+=1
 		
 		emit_signal("update_points")
 		emit_signal("unlock_lvl")
 	else: 
 		
 		var correct = get_node("/root/MainScene/ScrollContainer/VBoxContainer/Verificacao/V" + str(i)) 
-		if(get_node("/root/MainScene/Automato").check(text)):
-			correct.set_visible(true)
+		if(!get_node("/root/MainScene/Automato").check(text)):
+			correct.texture = load("res://imgs/incorrect.png")
+		
+		correct.set_visible(true)
 		
 		
 		for c in text:
