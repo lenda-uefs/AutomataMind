@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/0_lvl.png-7f1a69495ba44ba2b61713e85a1e7781.stex"
+path="res://.import/stars_prog.png-56004b015d548e68dd31d08e6319f87a.stex"
 
 [deps]
 
-source_file="res://imgs/0_lvl.png"
-source_md5="daaeaed48b52d9ff9cbb79f0f2e0bde0"
+source_file="res://imgs/stars_prog.png"
+source_md5="43459fdca572f340a84dd6957f5e21fe"
 
-dest_files=[ "res://.import/0_lvl.png-7f1a69495ba44ba2b61713e85a1e7781.stex" ]
-dest_md5="4966bab36964420105c219d94126ac21"
+dest_files=[ "res://.import/stars_prog.png-56004b015d548e68dd31d08e6319f87a.stex" ]
+dest_md5="768b9d3b20c52348e5415b31787ecd4f"
 
 [params]
 

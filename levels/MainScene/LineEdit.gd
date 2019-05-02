@@ -34,7 +34,8 @@ func on_text_enter(text):
 		
 		if(global.lvls_unlocked == global.cur_lvl):
 			global.lvls_unlocked+=1
-		
+		get_node("/root/MainScene").max_tentativas = get_node("/root/MainScene").max_tentativas-1 
+		get_node("/root/MainScene/Stars").set_visible(true)
 		emit_signal("update_points")
 		emit_signal("unlock_lvl")
 	else: 

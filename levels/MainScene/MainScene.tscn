@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://levels/MainScene/MainScene.gd" type="Script" id=1]
 [ext_resource path="res://imgs/bg.png" type="Texture" id=2]
@@ -10,7 +10,8 @@
 [ext_resource path="res://imgs/automato_2.png" type="Texture" id=8]
 [ext_resource path="res://levels/MainScene/Automato_0.gd" type="Script" id=9]
 [ext_resource path="res://fonts/Aldrich/Aldrich-Regular.ttf" type="DynamicFontData" id=10]
-[ext_resource path="res://imgs/left-arrow.png" type="Texture" id=11]
+[ext_resource path="res://levels/MainScene/Stars.tscn" type="PackedScene" id=11]
+[ext_resource path="res://imgs/left-arrow.png" type="Texture" id=12]
 
 [sub_resource type="DynamicFontData" id=1]
 
@@ -43,6 +44,14 @@ size = 22
 use_mipmaps = false
 use_filter = false
 font_data = SubResource( 4 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=6]
+
+size = 26
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 10 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [node name="MainScene" type="Node2D"]
@@ -656,41 +665,14 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_colors", "custom_fonts" ]
 
-[node name="Button" type="Button" parent="." index="7"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 18.0
-margin_top = 9.0
-margin_right = 132.0
-margin_bottom = 117.0
-rect_scale = Vector2( 0.5, 0.5 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-icon = ExtResource( 11 )
-flat = true
-align = 1
-_sections_unfolded = [ "Rect" ]
-
-[node name="Timer" type="Timer" parent="." index="8"]
+[node name="Timer" type="Timer" parent="." index="7"]
 
 process_mode = 1
 wait_time = 0.5
 one_shot = false
 autostart = false
 
-[node name="MenuButton" type="MenuButton" parent="." index="9"]
+[node name="MenuButton" type="MenuButton" parent="." index="8"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -714,5 +696,61 @@ group = null
 flat = true
 align = 1
 items = [  ]
+
+[node name="Label" type="Label" parent="." index="9"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 62.0
+margin_top = 573.0
+margin_right = 370.0
+margin_bottom = 616.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0.0859375, 0.0856018, 0.0856018, 1 )
+text = "A senha tem: 4 dígitos"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_fonts", "custom_styles" ]
+
+[node name="Stars" parent="." index="10" instance=ExtResource( 11 )]
+
+visible = false
+position = Vector2( 613.75, 336.628 )
+
+[node name="Button" type="Button" parent="." index="11"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 18.0
+margin_top = 9.0
+margin_right = 132.0
+margin_bottom = 117.0
+rect_scale = Vector2( 0.5, 0.5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+icon = ExtResource( 12 )
+flat = true
+align = 1
+_sections_unfolded = [ "Rect" ]
 
 
