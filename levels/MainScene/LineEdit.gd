@@ -17,8 +17,8 @@ signal unlock_lvl()
 func _ready():
 	
 	self.max_length = 4 # número máximmo de caracteres
-	if(global.cur_lvl == 3 or global.cur_lvl == 6):
-		self.max_length += 1;
+	if(global.cur_lvl >= 5):
+		self.max_length = 5;
 	self.connect("text_entered", self, "on_text_enter")
 	pass
 
@@ -32,7 +32,7 @@ func on_text_enter(text):
 		i = 0
 		self.editable = false
 		
-		if(global.lvls_unlocked == global.cur_lvl):
+		if(global.lvls_unlocked == global.cur_lvl and global.cur_lvl != 7):
 			global.lvls_unlocked+=1
 		get_node("/root/MainScene").max_tentativas = get_node("/root/MainScene").max_tentativas-1 
 		get_node("/root/MainScene/Stars").set_visible(true)

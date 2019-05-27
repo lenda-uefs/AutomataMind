@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/5_pins.png-1a128f5dd2b06ad4529cbf7587d536cd.stex"
+path="res://.import/5_lvl.png-adf2ab2b8617db717f0b80b3a7785f11.stex"
 
 [deps]
 
-source_file="res://imgs/5_pins.png"
-source_md5="99d64f8bec93a791ed93734d263ea4b3"
+source_file="res://imgs/5_lvl.png"
+source_md5="f54fcefc4f1fe19497909056479f0643"
 
-dest_files=[ "res://.import/5_pins.png-1a128f5dd2b06ad4529cbf7587d536cd.stex" ]
-dest_md5="2de0d86beb787603b481abfcd47ebdc4"
+dest_files=[ "res://.import/5_lvl.png-adf2ab2b8617db717f0b80b3a7785f11.stex" ]
+dest_md5="b43f72b82d0a93e559ac020621cc3d74"
 
 [params]
 

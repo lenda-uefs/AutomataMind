@@ -4,7 +4,7 @@
 [ext_resource path="res://levels/MainScene/Pegs.gd" type="Script" id=2]
 [ext_resource path="res://imgs/red_pin.PNG" type="Texture" id=3]
 
-[node name="pegs_holder" type="Sprite"]
+[node name="pegs_holder" type="Sprite" index="0"]
 
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
@@ -32,6 +32,12 @@ texture = ExtResource( 3 )
 
 visible = false
 position = Vector2( 16.4013, 24.5818 )
+texture = ExtResource( 3 )
+
+[node name="peg4" type="Sprite" parent="." index="4"]
+
+visible = false
+position = Vector2( 54.4005, -9.95131 )
 texture = ExtResource( 3 )
 
 

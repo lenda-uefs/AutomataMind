@@ -36,5 +36,4 @@ func _on_update_points():
 func _animate_points(start, end):
 	$Tween.interpolate_property($Stars, "value", start, end, 5, Tween.TRANS_ELASTIC, Tween.EASE_OUT)
 	$Tween.start()
-	
-	
+

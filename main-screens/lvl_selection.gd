@@ -33,19 +33,20 @@ func on_lvl_pressed(lvl):
 		global._goto_scene("/levels/lvl_0.tscn")
 		global.cur_lvl = 0
 	else:
-		var goto_level = "/levels/lvl_" + str(lvl) + ".tscn"
-		if(global.lvls_unlocked >= lvl):
-			global._goto_scene(goto_level)
-			global.cur_lvl = lvl
-		else:
-			get_node("Popup").show()
-			$Timer.start()
-			yield($Timer, "timeout")
-			$Popup.hide()
+		if(lvl < 8):
+			var goto_level = "/levels/lvl_" + str(lvl) + ".tscn"
+			if(global.lvls_unlocked >= lvl):
+				global._goto_scene(goto_level)
+				global.cur_lvl = lvl
+			else:
+				get_node("Popup").show()
+				$Timer.start()
+				yield($Timer, "timeout")
+				$Popup.hide()
 
 
 func unlock_lvl():
-	for i in range (0, global.lvls_unlocked+1):
-		var path = "lvl_imgs/lvl_" + str(i)
-		get_node(path).texture_normal = load("res://imgs/" + str(i) + "_lvl.png") 
-		get_node(path).texture_hover = load("res://imgs/" + str(i) + "_lvl_hover.png")
+		for i in range (0, global.lvls_unlocked+1):
+			var path = "lvl_imgs/lvl_" + str(i)
+			get_node(path).texture_normal = load("res://imgs/" + str(i) + "_lvl.png") 
+			get_node(path).texture_hover = load("res://imgs/" + str(i) + "_lvl_hover.png")
