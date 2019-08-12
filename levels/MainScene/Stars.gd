@@ -10,6 +10,13 @@ func _ready():
 	# Initialization here
 	pass
 
+func  _input(event):
+	if (event is InputEventMouseButton) and event.pressed and self.visible == true:
+		var pos = event.position
+		if(pos.x < 360 or pos.x > 855 or pos.y < 170 or pos.y > 855):
+			self.queue_free()
+	
+ 
 
 func _on_update_points():
 	var tries = get_node("/root/MainScene/").max_tentativas 

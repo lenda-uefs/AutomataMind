@@ -1,85 +1,32 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://main-screens/Menu.gd" type="Script" id=1]
-[ext_resource path="res://imgs/unlock.png" type="Texture" id=2]
-[ext_resource path="res://imgs/menu-bg.png" type="Texture" id=3]
-[ext_resource path="res://imgs/btn-instr.png" type="Texture" id=4]
-[ext_resource path="res://imgs/btn-instr_press.png" type="Texture" id=5]
-[ext_resource path="res://imgs/btn-instr_hover.png" type="Texture" id=6]
-[ext_resource path="res://imgs/btn-jogar.png" type="Texture" id=7]
-[ext_resource path="res://imgs/btn-jogar_press.png" type="Texture" id=8]
-[ext_resource path="res://imgs/btn-jogar_hover.png" type="Texture" id=9]
-[ext_resource path="res://imgs/btn-sair.png" type="Texture" id=10]
-[ext_resource path="res://imgs/btn-sair_press.png" type="Texture" id=11]
-[ext_resource path="res://imgs/btn-sair_hover.png" type="Texture" id=12]
-[ext_resource path="res://imgs/yellow-light.png" type="Texture" id=13]
-[ext_resource path="res://imgs/red-light.png" type="Texture" id=14]
+[ext_resource path="res://fonts/Aldrich/aldrich-title.tres" type="DynamicFont" id=2]
+[ext_resource path="res://imgs/unlock.png" type="Texture" id=3]
+[ext_resource path="res://imgs/neutral-menu-cpy.png" type="Texture" id=4]
+[ext_resource path="res://fonts/Aldrich/aldrich-button.tres" type="DynamicFont" id=5]
+[ext_resource path="res://fonts/Aldrich/aldrich_regular.tres" type="DynamicFont" id=6]
+[ext_resource path="res://fonts/Aldrich/Aldrich-Regular.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://imgs/yellow-light.png" type="Texture" id=8]
+[ext_resource path="res://imgs/red-light.png" type="Texture" id=9]
 
-[sub_resource type="Animation" id=1]
+[sub_resource type="DynamicFont" id=1]
 
-resource_name = "blink"
-length = 0.5
-loop = false
-step = 0.05
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray(  ),
-"transitions": PoolRealArray(  ),
-"update": 1,
-"values": [  ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath(".:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ true, false, true, false, true ]
-}
+size = 27
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 7 )
+_sections_unfolded = [ "Font", "Resource", "Settings" ]
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="AtlasTexture" id=2]
 
-resource_name = "blink"
-length = 0.5
-loop = false
-step = 0.05
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray(  ),
-"transitions": PoolRealArray(  ),
-"update": 1,
-"values": [  ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath(".:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ true, false, true, false, true ]
-}
+flags = 0
+region = Rect2( 0, 0, 0, 0 )
+margin = Rect2( 0, 0, 0, 0 )
+filter_clip = false
 
 [sub_resource type="Animation" id=3]
 
-resource_name = "blink"
 length = 0.5
 loop = false
 step = 0.05
@@ -114,6 +61,66 @@ length = 0.5
 loop = false
 step = 0.05
 tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 1,
+"values": [  ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true, false, true ]
+}
+
+[sub_resource type="Animation" id=5]
+
+length = 0.5
+loop = false
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 1,
+"values": [  ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true, false, true ]
+}
+
+[sub_resource type="Animation" id=6]
+
+length = 0.5
+loop = false
+step = 0.05
+tracks/0/type = "value"
 tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
@@ -131,13 +138,38 @@ tracks/0/keys = {
 script = ExtResource( 1 )
 is_instruction_read = false
 
-[node name="unlock" type="Sprite" parent="." index="0"]
+[node name="gameTitle" type="Label" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 367.0
+margin_top = 90.0
+margin_right = 857.0
+margin_bottom = 138.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Máquina de Senhas"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags", "custom_fonts" ]
+
+[node name="unlock" type="Sprite" parent="." index="1"]
 
 visible = false
 position = Vector2( 866.719, 282.361 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="." index="1"]
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." index="2"]
 
 layer = -1
 offset = Vector2( 0, 0 )
@@ -175,96 +207,103 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 expand = true
 stretch_mode = 0
 
-[node name="Buttons" type="Node2D" parent="." index="2"]
+[node name="Buttons" type="Node2D" parent="." index="3"]
 
-[node name="btnInstrucoes" type="TextureButton" parent="Buttons" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 281.0
-margin_top = 494.0
-margin_right = 475.0
-margin_bottom = 583.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-texture_normal = ExtResource( 4 )
-texture_pressed = ExtResource( 5 )
-texture_hover = ExtResource( 6 )
-_sections_unfolded = [ "Focus", "Material", "Textures", "Visibility", "custom_styles" ]
-
-[node name="btnJogar" type="TextureButton" parent="Buttons" index="1"]
+[node name="btnInstrucoes" type="Button" parent="Buttons" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 532.0
-margin_top = 499.0
-margin_right = 718.0
-margin_bottom = 587.0
+margin_left = 277.0
+margin_top = 471.0
+margin_right = 479.0
+margin_bottom = 560.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
-focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 1, 0.96875, 0.96875, 1 )
+custom_colors/font_color_hover = Color( 0.882353, 0.858824, 0.858824, 1 )
 toggle_mode = false
-enabled_focus_mode = 2
+enabled_focus_mode = 0
 shortcut = null
 group = null
-texture_normal = ExtResource( 7 )
-texture_pressed = ExtResource( 8 )
-texture_hover = ExtResource( 9 )
-_sections_unfolded = [ "Textures" ]
+text = "INSTRUÇÕES"
+flat = true
+align = 1
+_sections_unfolded = [ "Focus", "Material", "Textures", "Visibility", "custom_colors", "custom_fonts", "custom_styles" ]
 
-[node name="btnSair" type="TextureButton" parent="Buttons" index="2"]
+[node name="btnJogar" type="Button" parent="Buttons" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 767.0
-margin_top = 495.0
-margin_right = 955.0
-margin_bottom = 582.0
+margin_left = 536.0
+margin_top = 474.0
+margin_right = 722.0
+margin_bottom = 562.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
-focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0.882813, 0.862122, 0.862122, 1 )
 toggle_mode = false
-enabled_focus_mode = 2
+enabled_focus_mode = 0
 shortcut = null
 group = null
-texture_normal = ExtResource( 10 )
-texture_pressed = ExtResource( 11 )
-texture_hover = ExtResource( 12 )
-_sections_unfolded = [ "Textures" ]
+text = "JOGAR"
+flat = true
+align = 1
+_sections_unfolded = [ "Textures", "custom_colors", "custom_fonts" ]
 
-[node name="yellowCircle" type="Sprite" parent="." index="3"]
+[node name="btnSair" type="Button" parent="Buttons" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 771.0
+margin_top = 476.0
+margin_right = 959.0
+margin_bottom = 563.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0.882353, 0.858824, 0.858824, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+group = null
+text = "SAIR"
+icon = SubResource( 2 )
+flat = true
+align = 1
+_sections_unfolded = [ "Textures", "Theme", "custom_colors", "custom_fonts", "custom_styles" ]
+
+[node name="yellowCircle" type="Sprite" parent="." index="4"]
 
 editor/display_folded = true
 visible = false
 position = Vector2( 382.237, 324.762 )
-texture = ExtResource( 13 )
+texture = ExtResource( 8 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="yellowCircle" index="0"]
@@ -274,15 +313,15 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/blink = SubResource( 1 )
+anims/blink = SubResource( 3 )
 blend_times = [  ]
 
-[node name="yellowCircle2" type="Sprite" parent="." index="4"]
+[node name="yellowCircle2" type="Sprite" parent="." index="5"]
 
 editor/display_folded = true
 visible = false
 position = Vector2( 628.585, 323.079 )
-texture = ExtResource( 13 )
+texture = ExtResource( 8 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="yellowCircle2" index="0"]
@@ -292,15 +331,15 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/blink = SubResource( 2 )
+anims/blink = SubResource( 4 )
 blend_times = [  ]
 
-[node name="yellowCircle3" type="Sprite" parent="." index="5"]
+[node name="yellowCircle3" type="Sprite" parent="." index="6"]
 
 editor/display_folded = true
 visible = false
 position = Vector2( 863.488, 317.835 )
-texture = ExtResource( 13 )
+texture = ExtResource( 8 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="yellowCircle3" index="0"]
@@ -310,15 +349,15 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/blink = SubResource( 3 )
+anims/blink = SubResource( 5 )
 blend_times = [  ]
 
-[node name="redCircle" type="Sprite" parent="." index="6"]
+[node name="redCircle" type="Sprite" parent="." index="7"]
 
 editor/display_folded = true
 visible = false
 position = Vector2( 625.013, 321.193 )
-texture = ExtResource( 14 )
+texture = ExtResource( 9 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="redCircle" index="0"]
@@ -328,10 +367,10 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/blink = SubResource( 4 )
+anims/blink = SubResource( 6 )
 blend_times = [  ]
 
-[node name="Timer" type="Timer" parent="." index="7"]
+[node name="Timer" type="Timer" parent="." index="8"]
 
 process_mode = 1
 wait_time = 0.6

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/btn-instr_hover.png-f5c834548fb92b21ce20109d58becd2e.stex"
+path="res://.import/neutral-instruct-2.png-7887746b7a700e14a895a3faf31ca1cc.stex"
 
 [deps]
 
-source_file="res://imgs/btn-instr_hover.png"
-source_md5="e214fc10710171be336ccebb631403e4"
+source_file="res://imgs/neutral-instruct-2.png"
+source_md5="aea3d8eb74c5010adb4c35b03689976e"
 
-dest_files=[ "res://.import/btn-instr_hover.png-f5c834548fb92b21ce20109d58becd2e.stex" ]
-dest_md5="e476d0d7b757885a58c7a120ea466ba4"
+dest_files=[ "res://.import/neutral-instruct-2.png-7887746b7a700e14a895a3faf31ca1cc.stex" ]
+dest_md5="52e379b6c71594076beec3bbbe87f302"
 
 [params]
 

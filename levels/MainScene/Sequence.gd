@@ -26,7 +26,7 @@ func _get_cur_sequence():
 	
 	self.set_text(seq_atual)
 	
-	print(seq_atual) # TODO: apagar isso
+	# print(seq_atual) # TODO: apagar isso
 	
 
 

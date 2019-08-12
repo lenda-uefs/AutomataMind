@@ -1,38 +1,355 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://levels/lvl_6.tscn" type="PackedScene" id=1]
-[ext_resource path="res://imgs/automato_5.png" type="Texture" id=2]
-[ext_resource path="res://levels/Automato_5.gd" type="Script" id=3]
+[ext_resource path="res://fonts/Aldrich/adlrich.tres" type="DynamicFont" id=2]
+[ext_resource path="res://imgs/correct.png" type="Texture" id=3]
+[ext_resource path="res://imgs/automato_5.png" type="Texture" id=4]
+[ext_resource path="res://levels/Automato_5.gd" type="Script" id=5]
 
-[node name="MainScene" index="0" instance=ExtResource( 1 )]
+[node name="MainScene" instance=ExtResource( 1 )]
+
+[node name="ScrollContainer" parent="." index="1"]
+
+script = null
 
 [node name="VBoxContainer" parent="ScrollContainer" index="0"]
 
 margin_bottom = 900.0
 rect_min_size = Vector2( 1200, 900 )
+script = null
 
 [node name="Tentativas" parent="ScrollContainer/VBoxContainer" index="1"]
 
+editor/display_folded = true
 position = Vector2( -32.2098, -179.892 )
+
+[node name="S0" parent="ScrollContainer/VBoxContainer/Tentativas" index="0"]
+
+position = Vector2( 687.432, 264.348 )
+scale = Vector2( 1, 1 )
+_sections_unfolded = [ "Animation", "Material", "Region", "Transform", "Visibility", "Z Index" ]
+
+[node name="S1" parent="ScrollContainer/VBoxContainer/Tentativas" index="1"]
+
+position = Vector2( 687.432, 342.556 )
+scale = Vector2( 1, 1 )
+
+[node name="S2" parent="ScrollContainer/VBoxContainer/Tentativas" index="2"]
+
+position = Vector2( 687.432, 419.653 )
+scale = Vector2( 1, 1 )
+
+[node name="S3" parent="ScrollContainer/VBoxContainer/Tentativas" index="3"]
+
+position = Vector2( 687.432, 498.737 )
+scale = Vector2( 1, 1 )
+
+[node name="S4" parent="ScrollContainer/VBoxContainer/Tentativas" index="4"]
+
+position = Vector2( 687.432, 581.982 )
+scale = Vector2( 1, 1 )
+_sections_unfolded = [ "Region", "Transform" ]
+
+[node name="S5" parent="ScrollContainer/VBoxContainer/Tentativas" index="5"]
+
+editor/display_folded = false
+visible = false
+position = Vector2( 687.432, 664.886 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="S6" parent="ScrollContainer/VBoxContainer/Tentativas" index="6"]
+
+position = Vector2( 687.432, 750.59 )
+script = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="S7" parent="ScrollContainer/VBoxContainer/Tentativas" index="7"]
+
+visible = false
+modulate = Color( 1, 1, 1, 1 )
+position = Vector2( 687.432, 840 )
+script = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="S8" parent="ScrollContainer/VBoxContainer/Tentativas" index="8"]
+
+position = Vector2( 687.432, 930 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="S9" parent="ScrollContainer/VBoxContainer/Tentativas" index="9"]
+
+visible = false
+position = Vector2( 687.432, 1020 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="T0" parent="ScrollContainer/VBoxContainer/Tentativas" index="10"]
 
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 242.0
+margin_bottom = 285.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "aeiou"
+clip_text = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Material", "Rect", "Visibility", "custom_colors", "custom_fonts", "custom_styles" ]
+
+[node name="T1" parent="ScrollContainer/VBoxContainer/Tentativas" index="11"]
+
+visible = false
+margin_top = 322.0
+margin_bottom = 365.0
+mouse_filter = 2
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "aaaaaa"
+align = 0
+clip_text = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Material", "Rect", "Visibility", "custom_colors", "custom_fonts", "custom_styles" ]
+
+[node name="T2" parent="ScrollContainer/VBoxContainer/Tentativas" index="12"]
+
+visible = false
+margin_top = 398.0
+margin_bottom = 441.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "aaaaaa"
+autowrap = false
+clip_text = true
+_sections_unfolded = [ "Material", "Rect", "Visibility", "custom_colors", "custom_fonts", "custom_styles" ]
+
+[node name="T3" parent="ScrollContainer/VBoxContainer/Tentativas" index="13"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 479.0
+margin_bottom = 522.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "aaaaaa"
+clip_text = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Material", "Rect", "Visibility", "custom_colors", "custom_fonts", "custom_styles" ]
+
+[node name="T4" parent="ScrollContainer/VBoxContainer/Tentativas" index="14"]
+
+visible = false
+margin_top = 559.0
+margin_bottom = 602.0
+rect_scale = Vector2( 1, 1 )
+focus_mode = 0
+mouse_filter = 2
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "aaaaaa"
+align = 0
+clip_text = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Material", "Rect", "Visibility", "custom_colors", "custom_fonts", "custom_styles" ]
+
+[node name="T5" parent="ScrollContainer/VBoxContainer/Tentativas" index="15"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 645.0
+margin_bottom = 688.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "aaaaaa"
+clip_text = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Material", "Rect", "Visibility", "custom_colors", "custom_fonts", "custom_styles" ]
+
+[node name="T6" parent="ScrollContainer/VBoxContainer/Tentativas" index="16"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 730.0
+margin_bottom = 773.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "aaaaaa"
+clip_text = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Material", "Rect", "Visibility", "custom_colors", "custom_fonts", "custom_styles" ]
+
+[node name="T7" parent="ScrollContainer/VBoxContainer/Tentativas" index="17"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 820.0
+margin_bottom = 863.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "aaaaaa"
+clip_text = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Material", "Rect", "Visibility", "custom_colors", "custom_fonts", "custom_styles" ]
+
+[node name="T8" parent="ScrollContainer/VBoxContainer/Tentativas" index="18"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 910.0
+margin_bottom = 953.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "aaaaaa"
+clip_text = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Material", "Rect", "Visibility", "custom_colors", "custom_fonts", "custom_styles" ]
+
+[node name="T9" parent="ScrollContainer/VBoxContainer/Tentativas" index="19"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 1000.0
+margin_bottom = 1043.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "aaaaaa"
+clip_text = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Material", "Rect", "Visibility", "custom_colors", "custom_fonts", "custom_styles" ]
 
 [node name="Verificacao" parent="ScrollContainer/VBoxContainer" index="2"]
 
 position = Vector2( -29.4658, 46.5375 )
 
+[node name="V1" parent="ScrollContainer/VBoxContainer/Verificacao" index="1"]
+
+visible = false
+position = Vector2( 1127.65, 109.827 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="V5" parent="ScrollContainer/VBoxContainer/Verificacao" index="5"]
+
+texture = ExtResource( 3 )
+
+[node name="V6" parent="ScrollContainer/VBoxContainer/Verificacao" index="6"]
+
+texture = ExtResource( 3 )
+
+[node name="V7" parent="ScrollContainer/VBoxContainer/Verificacao" index="7"]
+
+texture = ExtResource( 3 )
+
+[node name="V8" parent="ScrollContainer/VBoxContainer/Verificacao" index="8"]
+
+texture = ExtResource( 3 )
+
+[node name="V9" parent="ScrollContainer/VBoxContainer/Verificacao" index="9"]
+
+texture = ExtResource( 3 )
+
 [node name="Automato" parent="." index="4"]
 
+editor/display_folded = false
 position = Vector2( 630.912, 103.409 )
 scale = Vector2( 0.704563, 0.700674 )
-texture = ExtResource( 2 )
-script = ExtResource( 3 )
+texture = ExtResource( 4 )
+script = ExtResource( 5 )
 
-[node name="Label" parent="." index="9"]
+[node name="MenuButton" parent="." index="8"]
 
-margin_left = 36.0
-margin_right = 344.0
+margin_left = 42.0
+margin_right = 54.0
+
+[node name="Senha" parent="." index="9"]
+
+margin_left = 24.0
+margin_right = 405.0
+
+[node name="Button" parent="." index="11"]
+
+margin_left = 18.0
+margin_right = 132.0
 
 

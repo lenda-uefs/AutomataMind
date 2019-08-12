@@ -7,10 +7,10 @@ path="res://.import/guess_place.PNG-f9186e93da20e47b170f0775be7fe0c8.stex"
 [deps]
 
 source_file="res://imgs/guess_place.PNG"
-source_md5="075eecb7612c0db5edc294a24320d593"
+source_md5="bcba2177bddae02f710f968c6416c76d"
 
 dest_files=[ "res://.import/guess_place.PNG-f9186e93da20e47b170f0775be7fe0c8.stex" ]
-dest_md5="b94b4cd70f83021a94d80095eae0994b"
+dest_md5="12eacbcb87130efd2289df92d62828f2"
 
 [params]
 

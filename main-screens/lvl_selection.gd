@@ -22,8 +22,6 @@ func _ready():
 	pass
 
 
-
-
 func on_btn_pressed():
 	global._goto_scene("main-screens/Menu.tscn")
 

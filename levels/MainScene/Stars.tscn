@@ -19,6 +19,7 @@ _sections_unfolded = [ "Font", "Resource", "Settings" ]
 
 position = Vector2( 616.192, 339.571 )
 script = ExtResource( 1 )
+_sections_unfolded = [ "Material", "Visibility" ]
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
@@ -44,6 +45,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 texture = ExtResource( 3 )
 stretch_mode = 0
+_sections_unfolded = [ "Rect" ]
 
 [node name="Stars" type="TextureProgress" parent="." index="2"]
 
@@ -63,7 +65,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 min_value = 0.0
 max_value = 1000.0
-step = 1.0
+step = 10.0
 page = 0.0
 value = 0.0
 exp_edit = false

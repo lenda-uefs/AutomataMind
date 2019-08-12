@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/btn-jogar_press.png-8e600e277eb1e82b97c1e22d30cea973.stex"
+path="res://.import/bg_menu.png-151250ab7f3730835153f10bdcab59f8.stex"
 
 [deps]
 
-source_file="res://imgs/btn-jogar_press.png"
-source_md5="ab2abc228df6c807a73459569a82c6e3"
+source_file="res://imgs/bg_menu.png"
+source_md5="a01beb89d13c817c7c3ddce8153e793e"
 
-dest_files=[ "res://.import/btn-jogar_press.png-8e600e277eb1e82b97c1e22d30cea973.stex" ]
-dest_md5="cd9da255ef4a8c4b13c53872edb130b9"
+dest_files=[ "res://.import/bg_menu.png-151250ab7f3730835153f10bdcab59f8.stex" ]
+dest_md5="cae1a73752f9fc0c2b265068d58eb248"
 
 [params]
 

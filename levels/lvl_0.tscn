@@ -4,7 +4,7 @@
 [ext_resource path="res://imgs/guess_4.png" type="Texture" id=2]
 [ext_resource path="res://imgs/automato_0.png" type="Texture" id=3]
 
-[node name="MainScene" index="0" instance=ExtResource( 1 )]
+[node name="MainScene" instance=ExtResource( 1 )]
 
 [node name="Pinos" parent="ScrollContainer/VBoxContainer" index="0"]
 

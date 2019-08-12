@@ -6,10 +6,6 @@
 
 [node name="MainScene" instance=ExtResource( 1 )]
 
-[node name="Tentativas" parent="ScrollContainer/VBoxContainer" index="1"]
-
-editor/display_folded = false
-
 [node name="S0" parent="ScrollContainer/VBoxContainer/Tentativas" index="0"]
 
 position = Vector2( 687.432, 264.348 )

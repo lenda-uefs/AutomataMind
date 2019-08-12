@@ -11,12 +11,13 @@ config_version=3
 [application]
 
 config/name="Máquina de Senhas"
-run/main_scene="res://main-screens/Menu.tscn"
+run/main_scene="res://main-screens/language_selection.tscn"
 config/icon="res://imgs/logo.png"
 
 [autoload]
 
 global="*res://global.gd"
+save_system="*res://save_system.gd"
 
 [display]
 

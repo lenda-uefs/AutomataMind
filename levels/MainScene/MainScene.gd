@@ -4,6 +4,8 @@ extends Node2D
 var texto = ["x"]
 var i = 0
 var frase
+var tentativas = ""
+var num_of_chars = 4
 export var max_tentativas = 10
 
 var pontos = 0 
@@ -14,16 +16,27 @@ var y_pegs_pos = 224.186157
 
 func _ready():
 	
-	#get_node("LineEdit").connect("update_points", self, "_calcula_pontos")
-	if(get_node("/root/global").cur_lvl == 5):
+	set_language()
+	if(global.cur_lvl == 5):
 		y_pegs_pos = 268.18
+		num_of_chars = 5
 	get_node("Button").connect("pressed", self, "_on_btn_back")
 	set_process_input(true)
 	pass
 
+func set_language():
+	if(global.language == "english"):
+		tentativas = "Number of tries left: " + str(max_tentativas)
+		$Tentativas.text = tentativas
+		$Senha.text = "The password contains: " + str(num_of_chars) + " characters"
+	else:
+		tentativas = "Tentativas restantes: " + str(max_tentativas)
+		$Tentativas.text  = tentativas
+		$Senha.text = "A senha tem: " + str(num_of_chars) + " caracteres"
+		
 
 func _on_btn_back():
-	get_node("/root/global")._goto_scene("main-screens/lvl_selection.tscn")
+	global._goto_scene("main-screens/lvl_selection.tscn")
 
 func _altera_texto(num, pegs):
 	
@@ -31,20 +44,24 @@ func _altera_texto(num, pegs):
 	max_tentativas-=1;
 	frase = get_node("LineEdit").get_text()
 	
+	
 	var tries = "ScrollContainer/VBoxContainer/Tentativas/T" + str(num)
 	var placeholder = "ScrollContainer/VBoxContainer/Tentativas/S" + str(num)
 	var pins = preload("res://levels/MainScene/Pegs.tscn").instance()
 	
+	if("11" in frase or "121" in frase or "131" in frase):
+		get_node(tries).set("custom_fonts/font", load("res://fonts/Aldrich/aldrich-spacing.tres"))
+	
 	pins.setup(pegs)
 	pins.position = Vector2(x_pegs_pos, y_pegs_pos) 
-	if(get_node("/root/global").cur_lvl >= 5):
+	if(global.cur_lvl >= 5):
 		pins.texture = load("res://imgs/5_pins.png")
 	get_node("ScrollContainer/VBoxContainer/Pinos").add_child(pins)
 	
 	get_node(placeholder).set_visible(true)
 	get_node(tries).set_visible(true)
 	get_node(tries).set_text(frase)
-	get_node("Tentativas").set_text("Tentativas Restantes: " + str(max_tentativas))
+	$Tentativas.set_text(tentativas + str(max_tentativas))
 	
 	if(max_tentativas == 0):
 			$LineEdit.editable = false # para ao chegar no número máximo de tentativas
@@ -52,6 +69,6 @@ func _altera_texto(num, pegs):
 
 func _calcula_pontos(multiplicador, acertos, tentativas):
 	pontos += (multiplicador * acertos)/tentativas
-	get_node("Pontos").set_text(str("Pontos: ", pontos))
+	$Pontos.set_text(str("Pontos: ", pontos))
 
 

@@ -49,7 +49,7 @@ _sections_unfolded = [ "Font", "Settings" ]
 [sub_resource type="DynamicFont" id=6]
 
 size = 26
-use_mipmaps = false
+use_mipmaps = true
 use_filter = false
 font_data = ExtResource( 10 )
 _sections_unfolded = [ "Font", "Settings" ]
@@ -80,6 +80,7 @@ _sections_unfolded = [ "Hint" ]
 
 [node name="ScrollContainer" type="ScrollContainer" parent="." index="1"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -102,6 +103,7 @@ _sections_unfolded = [ "Grow Direction", "Material", "Rect", "Scroll", "Size Fla
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer" index="0"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -619,6 +621,7 @@ script = ExtResource( 9 )
 
 [node name="Pontos" type="Label" parent="." index="5"]
 
+visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -647,10 +650,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 883.0
-margin_top = 22.0
-margin_right = 1344.0
-margin_bottom = 70.0
+margin_left = 782.0
+margin_top = 20.0
+margin_right = 1276.0
+margin_bottom = 71.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -660,6 +663,7 @@ size_flags_vertical = 4
 custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "TENTATIVAS RESTANTES: 10"
+align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
@@ -697,16 +701,16 @@ flat = true
 align = 1
 items = [  ]
 
-[node name="Label" type="Label" parent="." index="9"]
+[node name="Senha" type="Label" parent="." index="9"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 62.0
-margin_top = 573.0
-margin_right = 370.0
-margin_bottom = 616.0
+margin_left = 24.0
+margin_top = 571.0
+margin_right = 405.0
+margin_bottom = 634.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -715,7 +719,8 @@ size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0.0859375, 0.0856018, 0.0856018, 1 )
-text = "A senha tem: 4 dígitos"
+text = "A senha possui: 4 caracteres"
+autowrap = true
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
@@ -725,6 +730,7 @@ _sections_unfolded = [ "custom_colors", "custom_fonts", "custom_styles" ]
 
 visible = false
 position = Vector2( 613.75, 336.628 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
 
 [node name="Button" type="Button" parent="." index="11"]
 
