@@ -5,21 +5,17 @@ extends Node2D
 # var b = "textvar"
 
 func _ready():
-	# Called every time the node is added to the scene.
-	# Initialization here
+	
 	pass
-
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
 
 
 func _on_english_pressed():
 	global.language = "english"
+	TranslationServer.set_locale("en")
 	global._goto_scene("main-screens/Menu.tscn")
 
 
 func _on_portuguese_pressed():
 	global.language = "portuguese"
+	TranslationServer.set_locale("pt_BR")
 	global._goto_scene("main-screens/Menu.tscn")

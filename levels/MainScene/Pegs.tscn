@@ -1,8 +1,9 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://imgs/4_pins.png" type="Texture" id=1]
-[ext_resource path="res://levels/MainScene/Pegs.gd" type="Script" id=2]
+[ext_resource path="res://levels/MainScene/pegs.gd" type="Script" id=2]
 [ext_resource path="res://imgs/red_pin.PNG" type="Texture" id=3]
+
 
 [node name="pegs_holder" type="Sprite" index="0"]
 

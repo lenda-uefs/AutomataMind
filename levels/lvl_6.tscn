@@ -1,10 +1,11 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://levels/lvl_3.tscn" type="PackedScene" id=1]
-[ext_resource path="res://levels/MainScene/MainScene.gd" type="Script" id=2]
+[ext_resource path="res://levels/MainScene/main_scene.gd" type="Script" id=2]
 [ext_resource path="res://imgs/guess_5.png" type="Texture" id=3]
 [ext_resource path="res://imgs/automato_6.png" type="Texture" id=4]
 [ext_resource path="res://levels/Automato_6.gd" type="Script" id=5]
+
 
 [node name="MainScene" instance=ExtResource( 1 )]
 

@@ -25,7 +25,7 @@ func _ready():
 func on_text_enter(text): 
 	var pegs = []
 	sequencia = secret_seq
-	print(text)
+	#print(text)
 	var d = 0 # índice pra iterar sequencia de caracteres
 	
 	if(text == secret_seq):
@@ -34,7 +34,7 @@ func on_text_enter(text):
 		
 		if(global.lvls_unlocked == global.cur_lvl and global.cur_lvl != 7):
 			global.lvls_unlocked+=1
-			print("níveis desbloqueados" + str(global.lvls_unlocked))
+			#print("níveis desbloqueados" + str(global.lvls_unlocked))
 		get_node("/root/MainScene").max_tentativas = get_node("/root/MainScene").max_tentativas-1 
 		get_node("/root/MainScene/Stars").set_visible(true)
 		emit_signal("update_points")

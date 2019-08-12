@@ -50,16 +50,13 @@ func go_back():
 
 func _deferred_goto_scene(path):
 	
-	
 	cur_scene.free()
 	var s = ResourceLoader.load(path)
 	cur_scene = s.instance()
 	get_tree().get_root().add_child(cur_scene)
 	get_tree().set_current_scene(cur_scene)
 	
-	
 	var scene_name = get_tree().get_current_scene().get_name();
-	
 	
 	if(scene_name == "Menu"):
 		menu = get_tree().get_current_scene()

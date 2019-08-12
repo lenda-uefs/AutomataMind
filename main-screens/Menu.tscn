@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=2]
 
-[ext_resource path="res://main-screens/Menu.gd" type="Script" id=1]
+[ext_resource path="res://main-screens/menu.gd" type="Script" id=1]
 [ext_resource path="res://fonts/Aldrich/aldrich-title.tres" type="DynamicFont" id=2]
 [ext_resource path="res://imgs/unlock.png" type="Texture" id=3]
 [ext_resource path="res://imgs/neutral-menu-cpy.png" type="Texture" id=4]

@@ -1,9 +1,5 @@
 extends Node2D
 
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
-
 
 func _ready():
 	# Called every time the node is added to the scene.
@@ -35,10 +31,6 @@ func _on_update_points():
 	
 	_animate_points(0, points)
 	
-	# get_node("Stars").value = points
-	
-	#if(points > 600):
-	#	get_node("Label").set_visible(true)
 	
 func _animate_points(start, end):
 	$Tween.interpolate_property($Stars, "value", start, end, 5, Tween.TRANS_ELASTIC, Tween.EASE_OUT)

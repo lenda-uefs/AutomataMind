@@ -1,14 +1,14 @@
 [gd_scene load_steps=19 format=2]
 
-[ext_resource path="res://levels/MainScene/MainScene.gd" type="Script" id=1]
+[ext_resource path="res://levels/MainScene/main_scene.gd" type="Script" id=1]
 [ext_resource path="res://imgs/bg.png" type="Texture" id=2]
 [ext_resource path="res://imgs/guess_place.PNG" type="Texture" id=3]
 [ext_resource path="res://fonts/Aldrich/adlrich.tres" type="DynamicFont" id=4]
 [ext_resource path="res://imgs/correct.png" type="Texture" id=5]
-[ext_resource path="res://levels/MainScene/Sequence.gd" type="Script" id=6]
-[ext_resource path="res://levels/MainScene/LineEdit.gd" type="Script" id=7]
+[ext_resource path="res://levels/MainScene/sequence.gd" type="Script" id=6]
+[ext_resource path="res://levels/MainScene/line_edit.gd" type="Script" id=7]
 [ext_resource path="res://imgs/automato_2.png" type="Texture" id=8]
-[ext_resource path="res://levels/MainScene/Automato_0.gd" type="Script" id=9]
+[ext_resource path="res://levels/Automato_0.gd" type="Script" id=9]
 [ext_resource path="res://fonts/Aldrich/Aldrich-Regular.ttf" type="DynamicFontData" id=10]
 [ext_resource path="res://levels/MainScene/Stars.tscn" type="PackedScene" id=11]
 [ext_resource path="res://imgs/left-arrow.png" type="Texture" id=12]
@@ -650,10 +650,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 782.0
-margin_top = 20.0
-margin_right = 1276.0
-margin_bottom = 71.0
+margin_left = 771.0
+margin_top = 19.0
+margin_right = 1265.0
+margin_bottom = 70.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -709,7 +709,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 24.0
 margin_top = 571.0
-margin_right = 405.0
+margin_right = 355.0
 margin_bottom = 634.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false

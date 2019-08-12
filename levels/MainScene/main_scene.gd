@@ -25,18 +25,13 @@ func _ready():
 	pass
 
 func set_language():
-	if(global.language == "english"):
-		tentativas = "Number of tries left: " + str(max_tentativas)
-		$Tentativas.text = tentativas
-		$Senha.text = "The password contains: " + str(num_of_chars) + " characters"
-	else:
-		tentativas = "Tentativas restantes: " + str(max_tentativas)
-		$Tentativas.text  = tentativas
-		$Senha.text = "A senha tem: " + str(num_of_chars) + " caracteres"
-		
+	tentativas = tr("NUM_GUESSES")
+	$Tentativas.text = tentativas + str(max_tentativas)
+	$Senha.text = tr("NUM_CHARS") % str(num_of_chars)
+	
 
 func _on_btn_back():
-	global._goto_scene("main-screens/lvl_selection.tscn")
+	global._goto_scene("main-screens/LevelSelection.tscn")
 
 func _altera_texto(num, pegs):
 	

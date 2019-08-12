@@ -1,0 +1,19 @@
+id,en,pt_BR
+GAME_TITLE,AutomataMind,Máquina de Senhas
+BTN_PLAY,PLAY,JOGAR
+BTN_INSTR,INSTRUCTIONS,INSTRUÇÕES
+BTN_QUIT,QUIT,SAIR
+NUM_CHARS,The password contains: %s characters,A senha tem: %s caracteres
+NUM_GUESSES,Number of guesses left: ,Tentativas restantes: 
+INSTR_TITLE,Instructions,Instruções
+INSTR_GOAL,"Your goal is to uncover a hidden password based on an automaton presented to you during each level. Every time you make a guess, hints will be provided regarding how close to the secret code you got.","O objetivo do jogo é descobrir um código oculto com base no autômato exibido na fase. A cada tentativa, são fornecidas dicas sobre quão próximo da senha secreta o seu palpite chegou"
+INSTR_TOPLAY,"In order to play, follow these steps:","Para jogar, siga os passos abaixo: "
+INSTR_STEP1,1. Type in a sequence of characters that can be accepted by the automaton:,1. Insira uma sequência de caracteres que possa ser reconhecida pelo autômato:
+INSTR_0,2. Analyze how close your guess got to the secret passcode: ,2. Analise quão perto sua tentativa chegou da senha secreta: 
+INSTR_1,"White pegs mean there is a correct symbol (a character that is present in the password), but in the wrong position","Pinos brancos significam que existe um símbolo correto (presente na senha), mas na posição errada"
+INSTR_2,Red pegs mean that there is a match: a correct character in the correct position,Pinos vermelhos significam que existe um símbolo correto na posição correta
+INSTR_3,"A verification sign means that the sequence you typed in is accepted by the automaton, even if it doesn't correspond to the correct password","Uma confirmação signfica que a sequência inserida é reconhecida pelo autômato, mesmo que esta não seja a senha correta"
+INSTR_4,Suppose the password is [color=#f5b942]baba[/color] and your guess is  [color=#f5b942]bbab[/color],Supondo que a senha seja [color=#f5b942]baba[/color] e o seu chute seja [color=#f5b942]bbab[/color]
+INSTR_5,"A [color=red]red[/color] peg for the first  [color=red]b[/color], that is placed correctly. Two [color=white]white[/color] pegs corresponding to a [color=white]b[/color] and an [color=white]a[/color] that are present in the password, but are not placed in the correct position","Um pino [color=red]vermelho[/color] pelo primeiro [color=red]b[/color], que está na posição correta. Dois pinos [color=white]brancos[/color] por um [color=white]b[/color] e um [color=white]a[/color] que fazem parte da senha, mas não estão na posição correta.
+"
+INSTR_6, ,[color=red]Obs.:[/color] os pinos não necessariamente estarão na ordem de acerto dos símbolos

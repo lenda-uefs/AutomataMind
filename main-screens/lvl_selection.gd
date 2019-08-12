@@ -3,7 +3,6 @@ extends Node2D
 # class member variables go here, for example:
 # var a = 2
 # var b = "textvar"
-onready var global = get_node("/root/global")
 
 
 func _ready():
@@ -28,11 +27,11 @@ func on_btn_pressed():
 
 func on_lvl_pressed(lvl):
 	if(lvl == 0):
-		global._goto_scene("/levels/lvl_0.tscn")
+		global._goto_scene("levels/lvl_0.tscn")
 		global.cur_lvl = 0
 	else:
 		if(lvl < 8):
-			var goto_level = "/levels/lvl_" + str(lvl) + ".tscn"
+			var goto_level = "levels/lvl_" + str(lvl) + ".tscn"
 			if(global.lvls_unlocked >= lvl):
 				global._goto_scene(goto_level)
 				global.cur_lvl = lvl

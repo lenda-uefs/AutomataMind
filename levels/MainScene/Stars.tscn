@@ -1,11 +1,12 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://levels/MainScene/Stars.gd" type="Script" id=1]
+[ext_resource path="res://levels/MainScene/stars.gd" type="Script" id=1]
 [ext_resource path="res://imgs/bg_game.PNG" type="Texture" id=2]
 [ext_resource path="res://imgs/stars-bg.png" type="Texture" id=3]
 [ext_resource path="res://imgs/stars.png" type="Texture" id=4]
 [ext_resource path="res://imgs/stars_prog.png" type="Texture" id=5]
 [ext_resource path="res://fonts/Aldrich/Aldrich-Regular.ttf" type="DynamicFontData" id=6]
+
 
 [sub_resource type="DynamicFont" id=1]
 
