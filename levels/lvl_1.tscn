@@ -42,7 +42,7 @@ use_filter = false
 font_data = SubResource( 5 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
-[node name="MainScene" index="0" instance=ExtResource( 1 )]
+[node name="MainScene" instance=ExtResource( 1 )]
 
 [node name="TextureRect" parent="." index="0"]
 

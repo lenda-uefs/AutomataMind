@@ -1,19 +1,17 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://main-screens/instructions-2.gd" type="Script" id=1]
 [ext_resource path="res://imgs/neutral-instruct-2.png" type="Texture" id=2]
-[ext_resource path="res://imgs/back-to-menu.png" type="Texture" id=3]
-[ext_resource path="res://imgs/back-to-menu-hover.png" type="Texture" id=4]
-[ext_resource path="res://imgs/left-arrow.png" type="Texture" id=5]
-[ext_resource path="res://fonts/Aldrich/aldrich-button.tres" type="DynamicFont" id=6]
-[ext_resource path="res://fonts/Aldrich/Aldrich-Regular.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://imgs/left-arrow.png" type="Texture" id=3]
+[ext_resource path="res://fonts/Aldrich/aldrich-button.tres" type="DynamicFont" id=4]
+[ext_resource path="res://fonts/Aldrich/Aldrich-Regular.ttf" type="DynamicFontData" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 
 size = 19
 use_mipmaps = false
 use_filter = true
-font_data = ExtResource( 7 )
+font_data = ExtResource( 5 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="DynamicFont" id=2]
@@ -21,7 +19,7 @@ _sections_unfolded = [ "Font", "Settings" ]
 size = 19
 use_mipmaps = true
 use_filter = true
-font_data = ExtResource( 7 )
+font_data = ExtResource( 5 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="DynamicFont" id=3]
@@ -29,10 +27,10 @@ _sections_unfolded = [ "Font", "Settings" ]
 size = 15
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 7 )
+font_data = ExtResource( 5 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="instructions-2" type="Node"]
+[node name="instructions-2" type="Node" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Pause" ]
@@ -76,8 +74,6 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 3 )
-texture_hover = ExtResource( 4 )
 _sections_unfolded = [ "Textures", "custom_fonts", "custom_styles" ]
 
 [node name="btn-back" type="Button" parent="." index="2"]
@@ -103,7 +99,7 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-icon = ExtResource( 5 )
+icon = ExtResource( 3 )
 flat = true
 align = 1
 _sections_unfolded = [ "Rect" ]
@@ -124,7 +120,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/normal_font = ExtResource( 6 )
+custom_fonts/normal_font = ExtResource( 4 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
 bbcode_text = ""
@@ -155,7 +151,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Pinos brancos significam que existe um símbolo correto (presente na senha), mas na posição errada"
 autowrap = true
@@ -180,7 +176,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Pinos vermelhos significam que existe um símbolo correto na posição correta"
 autowrap = true
@@ -205,7 +201,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Uma confirmação signfica que a sequência inserida é reconhecida pelo autômato, mesmo que esta não seja a senha correta"
 autowrap = true

@@ -49,7 +49,7 @@ tracks/0/keys = {
 "values": [ "b", "bb", "bba", "bbab", "" ]
 }
 
-[node name="Instructions" type="Node" index="0"]
+[node name="Instructions" type="Node"]
 
 script = ExtResource( 1 )
 
