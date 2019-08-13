@@ -6,8 +6,8 @@ extends Node
 
 func _ready():
 	set_language()
-	$btn-back.connect("pressed", self, "on_btn_pressed", ["Instructions"]) 
-	$btn-menu.connect("pressed", self, "on_btn_pressed", ["Menu"])
+	get_node("btn-back").connect("pressed", self, "on_btn_pressed", ["Instructions"]) 
+	get_node("btn-menu").connect("pressed", self, "on_btn_pressed", ["Menu"])
 	pass
 
 func set_language():

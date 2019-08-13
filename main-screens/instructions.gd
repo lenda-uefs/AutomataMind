@@ -8,8 +8,8 @@ func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
 	set_language()
-	$btn-back.connect("pressed", self, "on_btn_pressed", ["Menu"])
-	$btn-forward.connect("pressed", self, "on_btn_pressed", ["Instructions_2"])
+	get_node("btn-back").connect("pressed", self, "on_btn_pressed", ["Menu"])
+	get_node("btn-forward").connect("pressed", self, "on_btn_pressed", ["Instructions_2"])
 	pass
 
 func on_btn_pressed(scene):

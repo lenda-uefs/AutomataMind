@@ -63,7 +63,7 @@ func _deferred_goto_scene(path):
 		reset_menu()
 	elif(scene_name == "Instructions"):
 		is_instruction_read = true
-	elif(scene_name == "lvl_selection"):
+	elif(scene_name == "LevelSelection"):
 		is_game_played = true
 
 func save_settings():
